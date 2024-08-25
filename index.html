@@ -24,7 +24,7 @@
     <section class='personal-stuff'>
         <h2> About Alice </h2>
         <ul>
-            <li> Age: 16 </li>
+            <li id="age">Age:</li>
             <li> Pronouns: She/Her/Hers & It/Its </li>
             <li> Programming Languages: Lua, Haxe, JavaScript*, HTML & CSS*, Python*</li>
             <li> Programs for: Friday Night Funkin' & ROBLOX</li>
@@ -154,10 +154,31 @@
     </div>
 
     <script>
+        // Dark Mode
         const toggleButton = document.getElementById('dark-mode-toggle');
         toggleButton.addEventListener('click', function () {
             document.body.classList.toggle('dark-mode');
         });
+
+        // Age Calculator (im lazy)
+
+        function calcAge() {
+            const today = new Date();
+            const birthday = new Date('2008-05-29');
+            let age = today.getFullYear() - birthday.getFullYear();
+            const monthDiff = today.getMonth() - birthday.getMonth();
+
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthday.getDate())) {
+                age--;
+            }
+
+            return age;
+        }
+
+        const ageList = document.getElementById('age');
+        ageList.textContent = 'Age: ' + calcAge();
+
+        console.log('hewwo :3');
     </script>
 </body>
 
