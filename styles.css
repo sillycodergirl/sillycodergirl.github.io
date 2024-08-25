@@ -8,6 +8,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    color: #121212;
+    transition: background-color 0.3s, color, 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f9f9f9;
 }
 
 header {
@@ -15,21 +22,27 @@ header {
     color: #fff;
     padding: 2rem 0;
     text-align: center;
-    background: conic-gradient(
-      #00a8db 90deg,
-      #70ddff 90deg 180deg,
-      #00a8db 180deg 270deg,
-      #70ddff 270deg
-    );
-                
+    background: conic-gradient(#00a8db 90deg,
+            #70ddff 90deg 180deg,
+            #00a8db 180deg 270deg,
+            #70ddff 270deg);
+
     background-size: 65px 65px;
     animation: moveCheckerboard 5s linear infinite;
+}
+
+header.dark-mode {
+    background: conic-gradient(#444 90deg,
+            #666 90deg 180deg,
+            #444 180deg 270deg,
+            #666 270deg);
 }
 
 @keyframes moveCheckerboard {
     0% {
         background-position: 0 0;
     }
+
     100% {
         background-position: -65px -65px;
     }
@@ -76,24 +89,23 @@ section {
 }
 
 hr {
-  width: 30%;
-  border: none;
-  border-top: 1px solid #ccc; 
-  margin: 1rem auto;
+    width: 30%;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1rem auto;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
-    /*margin-bottom: 1rem;*/
-    font-size: 34px
-}
-
+h2,
 h4 {
     text-align: center;
     color: #333;
-    margin-bottom: 1rem;
-    font-size: 23px
+    transition: color 0.3s;
+}
+
+body.dark-mode h2,
+body.dark-mode h4 {
+    color: #ccc;
+    /* Color when dark mode is on */
 }
 
 .personal-stuff ul {
@@ -161,4 +173,51 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#dark-mode-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body.dark-mode .work-item {
+    background: #333;
+    color: #f9f9f9;
+    border-color: #444;
+    transform: background 0.5s, color 0.5s;
+}
+
+.work-item a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+body.dark-mode .work-item a {
+    color: #66b2ff;
+}
+
+body.dark-mode .work-item a:hover {
+    color: #99ccff;
 }
