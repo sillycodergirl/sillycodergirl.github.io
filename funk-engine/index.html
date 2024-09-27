@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test CSS</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: large;
+            background-color: #DDDDDD;
+        }
+
+        .removal {
+            color: red;
+        }
+
+        .addition {
+            color: green;
+        }
+
+        .change {
+            color: #4a4a4a;
+        }
+
+        .fix {
+            color: #5f00b7;
+        }
+
+        .wip {
+            color: #6d0062;
+        }
+
+        /* .current h2::before {
+            content: '✨ ';
+        } */
+
+        div h2 {
+            text-decoration: underline;
+        }
+
+        .note {
+            font-style: italic;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>FUNK Engine Update Log</h1>
+    <hr>
+    <div class="current">
+        <h2>Version 0.0.1</h2>
+        <p class="note">NOTE: This Version is not functional at the moment.</p>
+        <p class="addition">Added: FUNK File Parsing</p>
+        <p class="addition">Added: New Logging system for the console.</p>
+        <img src="imgs/log.png">
+        <p class="addition">Added: Basic Conductor for BPM and song stuff</p>
+        <p class="wip">WIP: New Haxe macro functions for logging -- warn(); err(); info();</p>
+        <p class="wip">WIP: Key Detection based on timing</p>
+        <p class="alice">dang this is gonna be long but its a good one</p>
+    </div>
+
+    <script>
+        const alice = document.querySelectorAll('.alice');
+
+        alice.forEach(element => {
+            element.textContent = ': ' + element.textContent;
+            element.style.paddingTop = '15px';
+            var aliceText = document.createElement('span');
+            aliceText.textContent = "Alice";
+            aliceText.style.fontWeight = 'bold';
+
+            const icon = document.createElement('img');
+            icon.src = 'alice_icon.png';
+            icon.style.marginLeft = '5px';
+            icon.style.marginRight = '0px';
+            icon.style.verticalAlign = 'middle';
+
+            element.insertBefore(aliceText, element.firstChild);
+            element.insertBefore(icon, aliceText.nextSibling);
+
+
+
+            icon.style.height = aliceText.offsetHeight + 'px';
+            icon.style.width = 'auto';
+        });
+    </script>
+
+</body>
+
+</html>
