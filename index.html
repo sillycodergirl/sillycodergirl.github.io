@@ -4,181 +4,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alice's Site!</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Alice (@SillyCoderGirl)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #ccc;
+            margin-right: 20px;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .info-box {
+            background: #252525;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-box ul li {
+            margin: 5px 0;
+        }
+
+        .socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .socials img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .showcase-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .showcase-button:hover {
+            background-color: #666;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="profile-pic">
-                <img src="pfp.png" alt="Profile Picture">
-            </div>
-            <div class="name-bio">
-                <h1>Alice (@SillyCoderGirl)</h1>
-                <p>16 year old, transfem furry programmer and musician.</p>
-            </div>
+    <h1>Alice (@SillyCoderGirl)</h1>
+    <div class="container">
+        <div class="profile-pic">
+            <img src="pfp.png">
         </div>
-    </header>
-
-    <section class='personal-stuff'>
-        <h2> About Alice </h2>
-        <ul>
-            <li id="age">Age:</li>
-            <li> Pronouns: She/Her/Hers & It/Its </li>
-            <li> Programming Languages: Lua, Haxe, JavaScript*, HTML & CSS*, Python*</li>
-            <li> Programs for: Friday Night Funkin' & ROBLOX</li>
-        </ul>
-        <p style='text-align:center; font-size:13px'><i>* Certified in given language.</i></p>
-    </section>
-
-    <hr>
-
-    <section class='current-work'>
-        <h2>Current Work</h2>
-        <p style='text-align:center; font-size:13px'><i>This list will not be a complete list. Only a few hand picked
-                mods.</i></p>
-        <p style='text-align:center; font-size:15px'><b>I will not work on your project if you ask, unless you're a
-                close friend. Don't even try.</b></p>
-
-        <div class="work-item">
-            <h3>Eyeben XP V1</h3>
-            <p>Directed by: <a href='https://x.com/IBNVintage'>Eyeben</a></p>
-            <p>Hired as: <b>Programmer & Musician(ish)</b></p>
+        <div class="info-box">
+            <ul>
+                <li id="age">16 years old</li>
+                <li>Programmer and Musician</li>
+                <li>She/Her/Hers & It/It's</li>
+            </ul>
         </div>
-
-        <div class="work-item">
-            <h3>FNF: Yellow</h3>
-            <p>Directed by: <a href='https://x.com/byzafyre'>Byzafyre</a></p>
-            <p>Hired as: <b>Programmer</b></p>
-        </div>
-
-        <div class="work-item">
-            <h3>Colorless Crime</h3>
-            <p>Directed by: <a href='https://www.youtube.com/@trustieregg'>Trustier Egg</a></p>
-            <p>Hired as: <b>Programmer</b></p>
-        </div>
-    </section>
-
-    <hr>
-
-    <section class="previous-work">
-        <h2>Previous Work</h2>
-        <h4>Programming</h4>
-        <div class="work-item">
-            <h3>FNF Song Credit .lua Script 🎤</h3>
-            <p>An easy to customize script to show the credits for the song that is playing. <b>Has 7k+ downloads!</b>
-            </p>
-            <a href='https://gamebanana.com/tools/11519'>Check it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>FNF: QualO Engine 🎤</h3>
-            <p>A Psych Engine Fork that adds major Quality of Life features for modders. Currently a W.I.P</p>
-            <a href='https://github.com/sillycodergirl/fnf-qualo-engine'>Check it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>Eyeben XP DEMO 🎤</h3>
-            <p>A Friday Night Funkin' mod that was made in a modified psych engine. All coded by me!</p>
-            <a href='https://youtube.com/watch?v=EIXora07NTI'>Check it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>SCP: Crimson Madness 🎤</h3>
-            <p>While the stage was coded by TormentedProgram, I came in and ported it and made the events plus the menu
-                for the mod.</p>
-            <a href='https://www.youtube.com/watch?v=CjWLFMzJGsg'>Check it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>Window Manipulation Thing 🎤</h3>
-            <p>So I learned Window Manipulation for the HaxeFlixel game engine!</p>
-            <a href='https://fxtwitter.com/SillyCoderGirl/status/1765538993154695278?t=E5FdTvGX7hBEqQw2d9nt1A&s=19'>Check
-                it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>Chromatic Selection Screen 🎤</h3>
-            <p>A small menu I made for one of my dead FNF Mods, to where you had to select the chromatic you wanted to
-                use in game!</p>
-            <a href='https://fxtwitter.com/SillyCoderGirl/status/1746758151871840719?t=E5FdTvGX7hBEqQw2d9nt1A&s=19'>Check
-                it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>Rip-Off Doki Doki Menu 🎤</h3>
-            <p>A joke FNF mod intro, replicating the Doki Doki Literature Club intro. "inspired" from Raldi's
-                Crackhouse.</p>
-            <a href='https://fxtwitter.com/SillyCoderGirl/status/1741196338295894145?t=E5FdTvGX7hBEqQw2d9nt1A&s=19'>Check
-                it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>Click the Bart Modpack 🎤</h3>
-            <p>Some stupid joke I made to test the gimmick, coded all in lua.</p>
-            <a href='https://x.com/THEREALTIMELIME/status/1800625768013394147'>Check it out here!</a>
-        </div>
-
-
-        <h4>Music</h4>
-        <div class="work-item">
-            <h3>"placeholder name, think of one later (placeholder)" 🎤</h3>
-            <a href='https://www.youtube.com/watch?v=TGG-uVe564I'>Check it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>Flex 🎤</h3>
-            <a href='https://www.youtube.com/watch?v=OYhcvcBnRNU'>Check it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>your fate is sealed. 🎤</h3>
-            <a href='https://www.youtube.com/watch?v=I0e7VScEu9U'>Check it out here!</a>
-        </div>
-        <div class="work-item">
-            <h3>hey stan.</h3>
-            <a href='https://www.youtube.com/watch?v=eWwuMmBZprE'>Check it out here!</a>
-        </div>
-
-        <p style='text-align:center; font-size:13px'> NOTE: This is not the full list of previous work, there are WAY
-            more things to be shown. I will add them at a later date. </p>
-    </section>
-
-    <footer>
-        <ul class="social-media">
-            <li><a href="https://www.twitter.com/sillycodergirl" target="_blank">Twitter</a></li>
-            <li> // </li>
-            <li><a href="https://github.com/sillycodergirl" target="_blank">Github</a></li>
-            <li> // </li>
-            <li><a href="https://www.youtube.com/@sillycodergirl" target="_blank">Youtube</a></li>
-            <li>
-                <p>Discord: sillycodergirl</p>
-            </li>
-        </ul>
-    </footer>
-
-    <div class="fixed">
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </div>
-
+    <button class="showcase-button" onclick="window.location.href='https://sillycodergirl.com/showcase'">Visit My
+        Showcase</button>
+    <div class="socials">
+        <a href="https://twitter.com/sillycodergirl" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://github.com/sillycodergirl" target="_blank"><img src="github.png" alt="GitHub"></a>
+        <a href="https://youtube.com/@sillycodergirl" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+    </div>
     <script>
-        // Dark Mode
-        const toggleButton = document.getElementById('dark-mode-toggle');
-        toggleButton.addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-        });
-
-        // Age Calculator (im lazy)
-
-        function calcAge() {
-            const today = new Date();
-            const birthday = new Date('2008-05-29');
-            let age = today.getFullYear() - birthday.getFullYear();
-            const monthDiff = today.getMonth() - birthday.getMonth();
-
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthday.getDate())) {
+        function calculateAge(birthDate) {
+            let today = new Date();
+            let birth = new Date(birthDate);
+            let age = today.getFullYear() - birth.getFullYear();
+            let monthDiff = today.getMonth() - birth.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
                 age--;
             }
-
             return age;
         }
-
-        const ageList = document.getElementById('age');
-        ageList.textContent = 'Age: ' + calcAge();
-
-        console.log('hewwo :3');
+        document.getElementById("age").textContent = calculateAge("2008-05-29") + " years old";
     </script>
 </body>
 
