@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rules for Interacting - Alice</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      position: relative;
+    }
+
+    .info-box {
+      background: #252525;
+      padding: 30px 5px 40px 5px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+    }
+
+    .info-box h1 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ccc;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      overflow: hidden;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 0;
+      margin-top: 10px;
+      display: inline-block;
+      text-align: left;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #444;
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .fixed-button:hover {
+      background-color: #666;
+    }
+
+	a {
+		color: #fff
+	}
+  </style>
+</head>
+
+<body>
+
+  <div class="info-box">
+    <div class="profile-pic">
+      <img src="pfp.png" alt="Profile Picture">
+    </div>
+
+    <h1>When you Interact:</h1>
+
+    <ul>
+      <li><a href="https://nohello.net">Don't just say "hello".</a> (in dm's)</li>
+	  <li>Don't be afraid to ask me anything!</li>
+	  <li>No, I will not work on your project.</li>
+	  <li>I'm a <b>minor</b>. Don't be weird.</li>
+	  <li>Typically professional to people I'm not close with in DM's</li>
+	  <li>I am not afraid to ignore you and your messages.</li>
+	  <li>Please don't beg me for anything.</li>
+    </ul>
+  </div>
+
+  <button class="fixed-button" onclick="window.location.href='https://sillycodergirl.com';">Main Site</button>
+
+</body>
+
+</html>
