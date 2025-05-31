@@ -94,44 +94,32 @@
     <button class="fixed-button" onclick="window.location.href='https://sillycodergirl.com';">Main Site</button>
 
     <script>
-        const showcaseData =
-            [
-                {
-                    "name": "FNF Song Credit .lua Script",
-                    "desc": "An easy to customize script to show the credits for the song that is playing. Has 7k+ downloads!",
-                    "link": "https://gamebanana.com/tools/11519"
-                },
-                {
-                    "name": "FNF: QualO Engine",
-                    "desc": "A Psych Engine Fork that adds major Quality of Life features for modders. Currently a W.I.P",
-                    "link": "https://github.com/sillycodergirl/fnf-qualo-engine"
-                },
-                {
-                    "name": "Eyeben XP DEMO",
-                    "desc": "A Friday Night Funkin' mod that was made in a modified psych engine. All coded by me!",
-                    "link": "https://youtube.com/watch?v=EIXora07NTI",
-                    "image": "https://images.gamebanana.com/img/ss/mods/530-90_666334f55d161.jpg"
-                },
-                {
-                    "name": "SCP: Crimson Madness",
-                    "desc": "While the stage was coded by TormentedProgram, I came in and ported it and made the events plus the menu for the mod.",
-                    "link": "https://www.youtube.com/watch?v=CjWLFMzJGsg",
-                    "image": "https://images.gamebanana.com/img/ss/mods/530-90_65da434f74d74.jpg"
-                }
-            ]
+    const showcaseContainer = document.getElementById("showcase");
 
-        const showcaseContainer = document.getElementById("showcase");
-        showcaseData.forEach(item => {
-            if (!item.name || !item.link) return;
-            let showcaseItem = document.createElement("div");
-            showcaseItem.classList.add("item");
-            showcaseItem.innerHTML = `
-                <h2>${item.name}</h2>
-                ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ''}
-                ${item.desc ? `<p>${item.desc}</p>` : ''}
-                <a href="${item.link}" target="_blank">View</a>
-            `;
-            showcaseContainer.appendChild(showcaseItem);
+    fetch("https://raw.githubusercontent.com/sillycodergirl/sillycodergirl.github.io/refs/heads/main/showcase-data.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(showcaseData => {
+            showcaseData.forEach(item => {
+                if (!item.name || !item.link) return;
+                const showcaseItem = document.createElement("div");
+                showcaseItem.classList.add("item");
+                showcaseItem.innerHTML = `
+                    <h2>${item.name}</h2>
+                    ${item.image ? `<img src="${item.image}" alt="${item.name}">` : ''}
+                    ${item.desc ? `<p>${item.desc}</p>` : ''}
+                    <a href="${item.link}" target="_blank">View</a>
+                `;
+                showcaseContainer.appendChild(showcaseItem);
+            });
+        })
+        .catch(error => {
+            showcaseContainer.innerHTML = `<p>Failed to load showcase data.</p>`;
+            console.error("Error fetching showcase data:", error);
         });
     </script>
 </body>
