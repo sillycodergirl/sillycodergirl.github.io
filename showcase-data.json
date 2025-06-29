@@ -16,11 +16,18 @@
     "image": "https://images.gamebanana.com/img/ss/mods/530-90_666334f55d161.jpg"
   },
   {
+    "name": "Madosuki Mod",
+    "desc": "Coded everything in this mod",
+    "link": "https://gamebanana.com/mods/603106",
+    "image": "https://images.gamebanana.com/img/ss/mods/530-90_685d571c27533.jpg"
+  },
+  {
     "name": "SCP: Crimson Madness",
     "desc": "While the stage was coded by TormentedProgram, I came in and ported it and made the events plus the menu for the mod.",
     "link": "https://www.youtube.com/watch?v=CjWLFMzJGsg",
     "image": "https://images.gamebanana.com/img/ss/mods/530-90_65da434f74d74.jpg"
   },
+  
   {
     "name": "Dwiddlefinger",
     "desc": "Worked on the phase 3 bit",
